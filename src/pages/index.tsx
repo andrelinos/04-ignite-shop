@@ -44,8 +44,8 @@ export default function Home({ products }: HomeProps) {
           (product) =>
             product.active && (
               <Link
-                href={`/product/${product.id}`}
                 key={product.id}
+                href={`/product/${product.id}`}
                 prefetch={false}
               >
                 <Product className="keen-slider__slide">

@@ -73,12 +73,12 @@ export default function Product({ product }: ProductProps) {
   );
 }
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   return {
-//     paths: [{ params: { id: 'prod_MLH5Wy0Y97hDAC' } }],
-//     fallback: 'blocking',
-//   };
-// };
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [{ params: { id: 'prod_JNBmWySTYMbcw6' } }],
+    fallback: 'blocking',
+  };
+};
 
 export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
   params,
@@ -96,7 +96,7 @@ export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
       product: {
         id: product.id,
         name: product.name,
-        imageUrl: product.images[0],
+        imageUrl: product.images[0] || '',
         price: new Intl.NumberFormat('pt-BR', {
           style: 'currency',
           currency: 'BRL',
