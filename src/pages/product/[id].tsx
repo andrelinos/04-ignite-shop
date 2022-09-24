@@ -74,8 +74,10 @@ export default function Product({ product }: ProductProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  // Buscar produtos mais acessados / vendidos e adicionar o ID deles abaixo
+
   return {
-    paths: [{ params: { id: 'prod_MU9C0poUvfV5dD' } }],
+    paths: [{ params: { id: 'prod_MU9C0poUvfV5AI' } }], // Produto precisa existir
     fallback: 'blocking',
   };
 };
